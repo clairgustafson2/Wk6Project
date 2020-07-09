@@ -6,15 +6,19 @@ import java.util.List;
 
 public class Deck {
 	
-	private List<Card> cards = new ArrayList<Card>(); {
+	private List<Card> cards = new ArrayList<Card>(); 
+	private String[] suits = {" of Diamonds", " of Hearts", " of Spades", " of Clubs"};
+	private String[] values = {"2","3","4","5","6","7","8","9","10","Jack","Queen","King","Ace"};
 	
-		for (int x=0; x<4; x++) {
-			for (int y=2; y<15;y++) {
+	public void Card() {
+		for(String name : suits) {
+			for (String value : values) {
 				
-				cards.add(new Card(x, y));
+				cards.add(new Card(value, name));
 			}
 		}
 	}
+		
 		
 	public void shuffle() {
 		Collections.shuffle(cards);

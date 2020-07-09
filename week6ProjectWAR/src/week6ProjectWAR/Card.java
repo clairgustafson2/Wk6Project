@@ -2,74 +2,32 @@ package week6ProjectWAR;
 
 public class Card {
 	//fields of name and value
-	private int name;
-	private int value;
+	private String name;
+	private String value;
 	
-	public Card (int value, int name) {
+	public Card (String value, String name) {
 		this.value= value;
 		this.name= name;	
 	}
 	
 	
 	//Getters and setters
-	public int getName() {
+	public String getName() {
 		return name;
 	}
-	public void setName(int name) {
+	public void setName(String name) {
 		this.name = name;
 	}
-	public int getValue() {
+	public String getValue() {
 		return value;
 	}
-	public void setValue(int value) {
+	public void setValue(String value) {
 		this.value = value;
 	}
-
-	public String toString(){
-
-	        StringBuilder playingCard = new StringBuilder();
-	        
-	        switch(value){
-	            case 11:
-	                playingCard.append("Jack");
-	                break;
-	            case 12:
-	                playingCard.append("Queen");
-	                break;
-	            case 13:
-	                playingCard.append("King");
-	                break;
-	            case 14:
-	                playingCard.append("Ace");
-	                break;    
-	            default:
-	                playingCard.append(value); 
-	                break;
-	        }
-	        
-	        playingCard.append(" of ");
-	        
-	        switch(name){
-	            case 0:
-	                playingCard.append("Spades");
-	                break;
-	            case 1:
-	                playingCard.append("Hearts");
-	                break;
-	            case 2:
-	                playingCard.append("Clubs");
-	                break;
-	            case 3:
-	                playingCard.append("Diamonds");
-	                break;
-	            default:
-	                break;
-	        }
-	        
-	        //return the result of an entire combined string
-	        return playingCard.toString();
-	    }
 	
 	//prints out information about a card
-	
+	public void describe() {
+			System.out.println(getValue()+ " of " + getName());
+		
+	}
 	}
